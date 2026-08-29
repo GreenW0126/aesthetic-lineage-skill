@@ -1,5 +1,7 @@
 # Aesthetic Lineage Skill
 
+从一篇影评或评论出发，沿着作者的观察和表达方式，找到几部值得继续探索的电影、书籍或其他作品。它不是普通的“相似推荐”，而是试着找出作品之间更具体、可解释的审美联系。
+
 A text-grounded Agent Skill that extends a supplied review or critical essay into a short list of films, books, or other works. It is designed to follow the article's particular way of seeing rather than produce ordinary similarity recommendations.
 
 The Skill keeps formal, thematic, aesthetic, atmospheric, historical, and model-inferred connections distinct. Recommendations are limited to one to five works, explained without major spoilers, and checked for factual and attribution accuracy.
