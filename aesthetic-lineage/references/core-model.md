@@ -150,7 +150,7 @@ The proposed response passes only if every item below is true:
 - [ ] The language is fluid and inviting while remaining specific, information-dense, and factually grounded.
 - [ ] Influence and art-historical claims use evidence-proportionate language.
 - [ ] The response does not expose internal schemas, labels, scores, candidate pools, or challenge records.
-- [ ] The response does not use a preference from an earlier request unless the user explicitly repeated it in the current request.
+- [ ] No preference or constraint from an earlier request affected the result unless the current request explicitly asked to retain it.
 
 If the first result fails, rerun the entire protocol once, targeting the failed categories. If the second result fails, return no works and identify the unmet categories.
 
