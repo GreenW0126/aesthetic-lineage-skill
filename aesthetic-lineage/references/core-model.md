@@ -38,7 +38,7 @@ Do not decide whether the critic is correct. Do not begin from a movement, genre
 
 ## 2. Open divergence
 
-After the article-local reconstruction is stable, generate a broad candidate pool without applying the final gate candidate by candidate.
+After the article-local reconstruction is stable, generate a broad candidate pool without pruning each idea as it appears.
 
 Explore freely across:
 
@@ -56,7 +56,7 @@ These are prompts for divergence, not quotas or required categories. Do not forc
 
 Prefer candidates whose relevance depends on the article's particular way of seeing, not merely on the reviewed work's plot, genre, director, country, period, or existing recommendation neighborhood.
 
-Innovation is a primary objective. Among candidates that can later pass the hard gate, favor connections that are non-obvious, explanatory, and difficult to obtain from conventional lists or art-history taxonomies.
+Innovation is a primary objective. Among candidates that can be verified and explained concretely, favor connections that are non-obvious, explanatory, and difficult to obtain from conventional lists or art-history taxonomies.
 
 ## 3. Internal connection model
 
@@ -134,36 +134,3 @@ Avoid major plot turns, endings, concealed identities, and revelations. Prefer p
 A synopsis, reputation statement, string of aesthetic adjectives, generic “similar atmosphere” description, or repeated “the article says X; the work does Y” scaffold fails even when factually correct. Do not manufacture enthusiasm with vague superlatives; emotional force must arise from the details of the connection.
 
 Use natural prose. Do not display internal terminology unless the user explicitly asks for methodology.
-
-## 7. Hard output gate
-
-The proposed response passes only if every item below is true:
-
-- [ ] The list contains one to five works and is not padded.
-- [ ] Every item includes title, creator, year when reliably available, and a concise explanation.
-- [ ] Every article-side statement is grounded in the current supplied text.
-- [ ] Every recommended work and described feature is real and sufficiently verified.
-- [ ] Every explanation makes a specific correspondence rather than relying on tags or generic mood words.
-- [ ] Every explanation provides analytical information beyond synopsis.
-- [ ] Every explanation is substantial enough to make the relation intelligible without relying on spoilers.
-- [ ] The entries do not repeat a mechanical explanatory template or identical rhetorical sequence.
-- [ ] The language is fluid and inviting while remaining specific, information-dense, and factually grounded.
-- [ ] Influence and art-historical claims use evidence-proportionate language.
-- [ ] The response does not expose internal schemas, labels, scores, candidate pools, or challenge records.
-- [ ] No preference or constraint from an earlier request affected the result unless the current request explicitly asked to retain it.
-
-If the first result fails, rerun the entire protocol once, targeting the failed categories. If the second result fails, return no works and identify the unmet categories.
-
-## 8. Minimal challenge record
-
-In an explicit development or eval context, record a candidate that appears valuable but conflicts with a current rule:
-
-```yaml
-candidate: work title
-failed_rule: concise rule identifier or description
-why_still_valuable: one short explanation
-```
-
-Do not reward challenge volume. A useful challenge is specific, factually plausible, and capable of revealing a missing relation, an over-broad restriction, or a verification limitation. Ordinary uncertainty, fabricated facts, and vague novelty are not useful challenges.
-
-Do not persist challenge records during ordinary use.

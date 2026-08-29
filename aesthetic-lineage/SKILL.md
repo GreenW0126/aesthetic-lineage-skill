@@ -26,7 +26,7 @@ If the user supplies only a URL, retrieve the article before analysis. If the ar
 
 ## Required protocol
 
-Read [references/core-model.md](references/core-model.md) before analyzing the text. Follow its separation between closed-text reconstruction, open divergence, candidate verification, output composition, and the final gate.
+Read [references/core-model.md](references/core-model.md) before analyzing the text. Follow its separation between closed-text reconstruction, open divergence, candidate verification, and output composition.
 
 The central operating rule is:
 
@@ -58,26 +58,4 @@ Keep the evidence and analytical value present without announcing the machinery 
 
 Describe premises, formal choices, textures, and early or non-revelatory situations when possible. If explaining the connection would require a significant spoiler, either reformulate it around another verified feature or remove the candidate.
 
-Do not expose the internal ontology, scoring, candidate pool, relation labels, evidence ledger, confidence scale, rejected candidates, or challenge records.
-
-## Final gate and retry
-
-Before responding, check every hard requirement in `references/core-model.md`.
-
-- If all requirements pass, return the list.
-- If any requirement fails, rerun the complete analysis once using the failure categories as correction targets.
-- If the second result still fails, return no list. State that a reliable result could not be produced and name the unmet requirement or requirements.
-
-Do not offer an uncertain backup list after two failed attempts.
-
-## Challenge cases
-
-During development or an explicit eval run, record a minimal challenge case when a candidate seems genuinely valuable but conflicts with a current rule:
-
-```yaml
-candidate: work title
-failed_rule: current rule it conflicts with
-why_still_valuable: brief account of the connection's exploratory value
-```
-
-Challenge cases are rule-development data, not user-preference data. Do not show them in ordinary output, attach them to a user identity, or persist them outside an explicit evaluation workflow.
+Do not expose the internal ontology, scoring, candidate pool, relation labels, evidence ledger, confidence scale, or rejected candidates.
