@@ -1,8 +1,10 @@
 ---
 name: aesthetic-lineage
 description: Extend a supplied review or critical essay into a short, text-grounded list of films, books, or other works. Use when the user wants to explore the aesthetic attention, values, or sensibility opened by the criticism rather than receive ordinary similarity recommendations. Keep each run independent; do not build or reuse a user preference profile.
+license: MIT
+compatibility: Requires an Agent Skills-compatible client; web access is recommended for fact verification.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: mvp
 ---
 

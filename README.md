@@ -1,5 +1,6 @@
 # Aesthetic Lineage Skill
 
+[![Release](https://img.shields.io/github/v/release/GreenW0126/aesthetic-lineage-skill)](https://github.com/GreenW0126/aesthetic-lineage-skill/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 从一篇影评或评论出发，沿着作者的观察和表达方式，找到几部值得继续探索的电影、书籍或其他作品。它不是普通的“相似推荐”，而是试着找出作品之间更具体、可解释的审美联系。
@@ -44,6 +45,12 @@ https://github.com/GreenW0126/aesthetic-lineage-skill/tree/main/aesthetic-lineag
 ```
 
 The agent should place the [`aesthetic-lineage`](aesthetic-lineage/) directory in its personal or project skills directory. Start a new conversation after installation so the skill catalog refreshes.
+
+To install the current stable version instead of the moving `main` branch, use:
+
+```text
+https://github.com/GreenW0126/aesthetic-lineage-skill/tree/v0.1.1/aesthetic-lineage
+```
 
 ### Download it
 
