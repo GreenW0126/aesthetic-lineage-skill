@@ -1,5 +1,7 @@
 # Aesthetic Lineage Skill
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 从一篇影评或评论出发，沿着作者的观察和表达方式，找到几部值得继续探索的电影、书籍或其他作品。它不是普通的“相似推荐”，而是试着找出作品之间更具体、可解释的审美联系。
 
 Aesthetic Lineage turns a review or critical essay into a short, text-grounded path toward films, books, and other works. Instead of asking *what might you like next?*, it asks:
@@ -32,11 +34,30 @@ This is not a fixed output template. A recommendation may begin with an image, a
 
 ## Installation
 
-Download the [`aesthetic-lineage`](aesthetic-lineage/) directory and place it in the personal or project skills directory used by an Agent Skills-compatible tool.
+### Ask an agent to install it
 
-- Codex: install as `~/.codex/skills/aesthetic-lineage/`. Relevant requests can trigger it automatically; `$aesthetic-lineage` remains available for explicit use.
-- Claude Code: install as `~/.claude/skills/aesthetic-lineage/` and invoke with `/aesthetic-lineage`.
-- Other compatible agents may use a different skills directory or invocation syntax. The portable instructions are in [`SKILL.md`](aesthetic-lineage/SKILL.md) and [`core-model.md`](aesthetic-lineage/references/core-model.md); [`agents/openai.yaml`](aesthetic-lineage/agents/openai.yaml) is Codex-specific.
+In Codex or another agent that can install skills from GitHub, send:
+
+```text
+Install the aesthetic-lineage skill from:
+https://github.com/GreenW0126/aesthetic-lineage-skill/tree/main/aesthetic-lineage
+```
+
+The agent should place the [`aesthetic-lineage`](aesthetic-lineage/) directory in its personal or project skills directory. Start a new conversation after installation so the skill catalog refreshes.
+
+### Download it
+
+Download the [latest repository ZIP](https://github.com/GreenW0126/aesthetic-lineage-skill/archive/refs/heads/main.zip), extract it, and copy the `aesthetic-lineage` directory to the location used by your agent:
+
+- **Codex:** `~/.codex/skills/aesthetic-lineage/`
+- **Claude Code:** `~/.claude/skills/aesthetic-lineage/`
+- **Other agents:** use the personal or project skills directory documented by that tool.
+
+The portable instructions are in [`SKILL.md`](aesthetic-lineage/SKILL.md) and [`core-model.md`](aesthetic-lineage/references/core-model.md). [`agents/openai.yaml`](aesthetic-lineage/agents/openai.yaml) enables automatic selection in Codex; other agents may use their own discovery and invocation conventions.
+
+### Verify the installation
+
+Start a new conversation and submit a review with a request such as the example below. A successful run returns one to five works and explains each connection through concrete details from the supplied criticism. In Codex, relevant requests can trigger the skill automatically; `$aesthetic-lineage` remains available for explicit use.
 
 ## Basic use
 
@@ -61,3 +82,7 @@ Ignore all preferences and constraints from earlier turns, including year, regio
 ```
 
 Starting a new conversation remains the strongest option when complete context isolation is required.
+
+## License
+
+Released under the [MIT License](LICENSE).
